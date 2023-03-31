@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMI_Calculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+        >
+
+        <Label
+                x:Name="HeightLabel"
+                FontSize="32"
+                HorizontalOptions="Center" />
+        <Entry 
+                x:Name="HeightEntry"
+                Placeholder="Height (m):"
+                />
+
+        <Label
+                x:Name="WeightLabel"
+                FontSize="32"
+                HorizontalOptions="Center" />
+        <Entry 
+                x:Name="WeightEntry"
+                Placeholder="Weight (kg):"/>
+
+
+
+        <Button
+                x:Name="CalculateButton"
+                Text="Click me to calculate"
+                SemanticProperties.Hint="Calculates the BMI"
+                Clicked="CalculateOnClick"
+                HorizontalOptions="Center"
+                Padding="30, 10" />
+
+        <Button
+                x:Name="ResetButton"
+                Text="Click me to reset"
+                SemanticProperties.Hint="Resets the BMI"
+                Clicked="ResetOnClick"
+                HorizontalOptions="Center" 
+                Padding="40, 10"
+                />
+        <Image 
+                Loaded="ResetOnClick" 
+                Opacity="0.5"/>
+
+
+        <Label 
+                x:Name="ResultLabel" />
+        <Image
+                x:Name="BMIimage" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
